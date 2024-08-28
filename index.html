@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Example - Non-Time-Based Media Alternative</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .alternative-link {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            color: #007bff;
+            text-decoration: none;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+        .alternative-link:hover {
+            background-color: #e2e6ea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Good Example - Non-Time-Based Media Alternative</h1>
+        
+        <h2>Image with Alternative</h2>
+        <img src="image.jpg" alt="Descriptive image text">
+        <a href="#imageAlternative" class="alternative-link">View Alternative Description</a>
+        
+        <!-- Alternative Description Section -->
+        <div id="imageAlternative" style="display:none;">
+            <h3>Alternative Description</h3>
+            <p>This image shows a beautiful landscape with mountains, a river, and a forest. It is a serene and picturesque scene.</p>
+        </div>
+        
+        <script>
+            // JavaScript to toggle the alternative description visibility
+            document.querySelector('.alternative-link').addEventListener('click', function(event) {
+                event.preventDefault();
+                const alternativeSection = document.getElementById('imageAlternative');
+                if (alternativeSection.style.display === 'none') {
+                    alternativeSection.style.display = 'block';
+                } else {
+                    alternativeSection.style.display = 'none';
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
